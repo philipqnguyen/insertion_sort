@@ -12,9 +12,9 @@ describe 'Insertion sort' do
     @insertion.sort(sample).must_equal [1, 2, 3, 4, 5, 6, 7, 8, 9]
   end
 
-  it 'should sort an unordered array with a 0' do
-    sample = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+  it 'should sort a completely reversed array' do
+    sample = [9, 8, 7, 6, 5, 4, 3, 2, 1]
 
-    @insertion.sort(sample).must_equal [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    @insertion.sort(sample).must_equal [1, 2, 3, 4, 5, 6, 7, 8, 9]
   end
 end

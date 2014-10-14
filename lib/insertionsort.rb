@@ -1,6 +1,7 @@
 # Insertion sort
 class InsertionSort
   def sort(unsorted_array)
+    start_benchmark = Time.now
     @unsorted = unsorted_array
 
     @unsorted.each_with_index do |num, index|
@@ -8,6 +9,7 @@ class InsertionSort
 
       iterate_down_until_proper_position(num, index)
     end
+    puts "Benchmark: #{(Time.now - start_benchmark) * 1000} milliseconds"
     @unsorted
   end
 
